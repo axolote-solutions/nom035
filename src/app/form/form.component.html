@@ -1,0 +1,83 @@
+
+<div class="form-component">
+    <form class="form-person" [formGroup]="dataForm" (ngSumbit)="addPost(dataForm.value)">
+          
+        <div class="field">
+            Nombre(s)
+            <br>
+            <input type="text" formControlName="firstName" placeholder="Ingresa tu respuesta">
+            <div class="alert" *ngIf="dataForm.controls['firstName'].touched && !dataForm.controls['firstName'].valid">{{ titleAlert }}</div>
+        </div>
+        <hr>
+        <div class="field">
+            Apellidos
+            <br>
+            <input type="text" formControlName="lastName" placeholder="Ingresa tu respuesta">
+            <div class="alert" *ngIf="!dataForm.controls['lastName'].valid && dataForm.controls['lastName'].touched ">{{ titleAlert }}</div>
+        </div>
+        <hr>
+        <div class="field"> <!-- Edad de 18 a +60-->
+            Edad
+            <br>
+            <select name="age">
+                <option value=null>Elegir</option>
+                <option *ngFor="let data of age">{{age}}</option>
+            </select>
+        </div>
+        <hr>
+        <div class="field">
+            Sexo
+            <br>
+            <select formControlName="sex">
+                <option value=null>Elegir</option>
+                <option *ngFor="let select of sex" [value]="select.id">{{select.text}}</option>
+            </select>
+        </div>
+        <hr>
+        <div class="field">
+            Área
+            <br>
+            <select formControlName="area">
+                <option value=null>Elegir</option>
+                <option *ngFor="let select of area" [value]="select.idA">{{select.text}}</option>
+            </select>
+        </div>
+        <hr>
+        <div class="field">
+            Nivel Jerárquico
+            <br>
+            <select formControlName="level">
+                <option value=null>Elegir</option>
+                <option placeholder="Elegir" *ngFor="let select of level" [value]="select.idL">{{select.text}} </option><hr>
+            </select>
+        </div>
+        <hr>
+        <div class="field"> 
+            <!-- Aqui se necesita de -1 a +15-->
+            <label for="years"> Antigüedad en la empresa (años) </label> <br>
+            <input formControlName="years" type="radio" name="years">1<br>
+            <input formControlName="years" type="radio" name="years" id="">2 <br>
+            <input formControlName="years" type="radio" name="years" id="">3<br>
+            <input formControlName="years" type="radio" name="years" id="">4<br>
+       </div>
+        <hr>
+        <div class="field">
+            Correo electrónico institucional
+            <br>
+            <input formControlName="institucionalEmail" type="email" placeholder="Ingresa tu respuesta">
+            <!--<div class="alert" *ngIf="dataForm.controls['institucionalEmail'].touched && !dataForm.controls['institucionalEmail'].valid">{{ titleAlert }}</div>-->
+        </div>
+        <hr>
+        <div class="field"> 
+            Correo electrónico personal
+            <br>
+            <input formControlName="personalEmail" type="email" placeholder="Ingresa tu respuesta">
+            <!--<div class="alert" *ngIf="dataForm.controls['personalEmail'].touched && !dataForm.controls['personalEmail'].valid">{{ titleAlert }}</div>-->
+        </div>
+        <div routerLinkActive="active">
+            <button type="submit" [disabled]="!dataForm.valid" [routerLink]="['firstSection']" class="next-button">
+                Siguiente
+            </button>
+        </div>
+    </form>
+</div>

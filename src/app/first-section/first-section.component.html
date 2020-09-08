@@ -1,0 +1,80 @@
+<div class="gad">
+    <h2>GAD</h2>
+    <form action="" method="POST" class="gad-form">
+        
+        <label id="first-question" aria-labelledby="first-question" class="one" [(ngModel)]="firstQ"> 1. Sentirse nervioso(a), ansioso(a), o con los nervios de punta</label>
+        <mat-radio-group class="example-radio-group" [(ngModel)]="firstQ">
+          <mat-radio-button class="example-radio-button" *ngFor="let options of answer" [value]="answer">
+            {{answer}}
+          </mat-radio-button>
+          </mat-radio-group>
+        <div>You choose: {{firstQ}}</div>
+        
+        <p>
+            <label for="one" class="question">
+            1. Sentirse nervioso(a), ansioso(a), o con los nervios de punta <hr>
+                <input type="radio" name="one">Para nada <br>
+                <input type="radio" name="one">Varios días <br>
+                <input type="radio" name="one">Más de la mitad de los días <br>
+                <input type="radio" name="one">Casi todo los días
+            </label>
+        </p>
+        <p>
+            <label for="two" class="question"> 
+            2. No poder dejar de preocuparse o no poder controla la preocupación <hr> 
+                <input type="radio" name="two">Para nada <br>
+                <input type="radio" name="two">Varios días <br>
+                <input type="radio" name="two">Más de la mitad de los días <br>
+                <input type="radio" name="two">Casi todo los días
+            </label>
+        </p>
+        <p> 
+            <label for="three" class="question">
+            3. Preocuparse demasiado por diferentes cosas <hr> 
+                <input type="radio"  name="three">Para nada <br>
+                <input type="radio"  name="three">Varios días <br>
+                <input type="radio" name="three">Más de la mitad de los días <br>
+                <input type="radio" name="three">Casi todo los días 
+            </label>
+        </p>
+        <p>
+            <label for="four" class="question">
+            4. Dificultad para relajarse <hr> 
+                <input type="radio"  name="four">Para nada <br>
+                <input type="radio"  name="four">Varios días <br>
+                <input type="radio" name="four">Más de la mitad de los días <br>
+                <input type="radio" name="four">Casi todo los días 
+            </label>
+        </p>
+        <p>
+            <label for="five" class="question">
+            5. Estar inquieto(a) que es difícil permanecer sentado(a) tranquilamente <hr> 
+                <input type="radio"  name="five">Para nada <br>
+                <input type="radio"  name="five">Varios días <br>
+                <input type="radio" name="five">Más de la mitad de los días <br>
+                <input type="radio" name="five">Casi todo los días
+            </label>
+        </p>
+        <p>
+            <label for="six" class="question">
+            6. Molestarse o ponerse irritable fácilmente <hr> 
+                <input type="radio"  name="six">Para nada <br>
+                <input type="radio"  name="six">Varios días <br>
+                <input type="radio" name="six">Más de la mitad de los días <br>
+                <input type="radio" name="six">Casi todo los días
+            </label>
+        </p>
+        <p>
+            <label for="seven" class="question">
+            7. Sentir miedo como si algo terrible pudiese pasar <hr> 
+                <input type="radio"  name="seven">Para nada <br>
+                <input type="radio"  name="seven">Varios días <br>
+                <input type="radio" name="seven">Más de la mitad de los días <br>
+                <input type="radio" name="seven">Casi todo los días
+            </label>
+        </p>
+        <button class="next-button">
+            Siguiente
+        </button>
+    </form>
+</div>

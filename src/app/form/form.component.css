@@ -1,0 +1,50 @@
+
+.form-person {
+  margin-left: 350px;
+  margin-right: 350px;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+.field {
+  font-size: 16px;
+  padding:20px;
+  border-radius: 10px;
+  /*background: #abd0d0;*/
+}
+
+input {
+  width: 300px;
+  border: none;
+  border-bottom: 1px solid #cccccc;
+  font-size:14px;
+  padding:5px;
+}
+
+.next-button {
+    padding: 6px;
+    margin: 8px;
+    min-width: 100px;
+    border-radius: 4px;
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration:none;
+    border: none;
+    outline: none;
+    box-shadow: 5px 10px 18px #b8b8b8;
+    /*float:inline-start;*/
+    margin-left: 600px;
+    margin-right: 600px;
+  }
+
+  .next-button:hover {
+    background: #8eadad;
+    color: #ffffff;
+}
+
+.alert{
+  color:red;
+  font-size: 12px;
+  margin:5px;
+  padding:5px;
+}
